@@ -1,0 +1,2 @@
+rvm ruby-2.7.4@prm
+export APP_NAME=prm

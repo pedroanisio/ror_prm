@@ -13,11 +13,11 @@ development:
   port: "<%= ENV['DATABASE_PORT'] %>"
 production: 
   adapter: postgresql
-  database: appname_production
+  database: prm_production
   encoding: unicode
   password: "<%= ENV['CONTATOS_DATABASE_PASSWORD'] %>"
   pool: "<%= ENV.fetch("RAILS_MAX_THREADS") { 5 } %>"
-  username: appname
+  username: prm
 test: 
   adapter: postgresql
   encoding: unicode
