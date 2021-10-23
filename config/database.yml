@@ -1,0 +1,29 @@
+default: 
+  adapter: postgresql
+  encoding: unicode
+  pool: "<%= ENV.fetch("RAILS_MAX_THREADS") { 5 } %>"
+development: 
+  adapter: postgresql
+  encoding: unicode
+  pool: "<%= ENV.fetch("RAILS_MAX_THREADS") { 5 } %>"
+  host: "<%= ENV['DATABASE_HOST'] %>"
+  database: "<%= ENV['DATABASE_NAME'] %>"
+  username: "<%= ENV['DATABASE_USERNAME'] %>"
+  password: "<%= ENV['DATABASE_PASSWORD'] %>"
+  port: "<%= ENV['DATABASE_PORT'] %>"
+production: 
+  adapter: postgresql
+  database: appname_production
+  encoding: unicode
+  password: "<%= ENV['CONTATOS_DATABASE_PASSWORD'] %>"
+  pool: "<%= ENV.fetch("RAILS_MAX_THREADS") { 5 } %>"
+  username: appname
+test: 
+  adapter: postgresql
+  encoding: unicode
+  pool: "<%= ENV.fetch("RAILS_MAX_THREADS") { 5 } %>"
+  host: "<%= ENV['DATABASE_HOST'] %>"
+  database: "<%= ENV['DATABASE_NAME'] %>"
+  username: "<%= ENV['DATABASE_USERNAME'] %>"
+  password: "<%= ENV['DATABASE_PASSWORD'] %>"
+  port: "<%= ENV['DATABASE_PORT'] %>"
